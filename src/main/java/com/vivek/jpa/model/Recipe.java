@@ -24,6 +24,8 @@ public class Recipe {
     private  Notes notes;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
     private Set<Ingredient> ingredients;
+    @Enumerated(value = EnumType.STRING)//string values will be stored in the database, default is ordinal
+    private Difficulty difficulty;
 
     public Long getId() {
         return id;
