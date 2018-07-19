@@ -25,6 +25,24 @@ public class Recipe {
     private Set<Ingredient> ingredients;
     @Enumerated(value = EnumType.STRING)//string values will be stored in the database, default is ordinal
     private Difficulty difficulty;
+    @ManyToMany
+    private Set<Category> categories;
+
+    public Difficulty getDifficulty() {
+        return difficulty;
+    }
+
+    public void setDifficulty(Difficulty difficulty) {
+        this.difficulty = difficulty;
+    }
+
+    public Set<Category> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(Set<Category> categories) {
+        this.categories = categories;
+    }
 
     public Long getId() {
         return id;
