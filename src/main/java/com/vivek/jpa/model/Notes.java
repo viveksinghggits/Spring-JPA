@@ -1,8 +1,11 @@
 package com.vivek.jpa.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity
+@Data
 public class Notes {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,7 +17,7 @@ public class Notes {
     private String recipeNotes;
 
 
-    public Long getId() {
+   /* public Long getId() {
         return id;
     }
 
@@ -32,9 +35,9 @@ public class Notes {
 
     public String getRecipeNotes() {
         return recipeNotes;
-    }
+l    }
 
     public void setRecipeNotes(String recipeNotes) {
         this.recipeNotes = recipeNotes;
-    }
+    }*/
 }
